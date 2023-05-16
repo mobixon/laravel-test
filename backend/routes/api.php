@@ -25,5 +25,5 @@ Route::prefix('tasks')->group(function () {
     Route::get('/{id}', [TaskController::class, 'show']);
     Route::put('/{id}', [TaskController::class, 'update']);
     Route::delete('/{id}', [TaskController::class, 'destroy']);
-    Route::put('/{id}/done', [TaskController::class, 'moveToDone']);
+    Route::patch('/{id}/done', [TaskController::class, 'moveToDone']);
 });
